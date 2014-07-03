@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>GYM APP</title>    
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />       		
+</head>
+<body>
+
+	<div id="show_routine_details_page" data-role="page">
+		<!-- Header -->
+		<div data-role="header">						
+			<h1 id="index_week_title">New exercise</h1>				
+		</div>
+		<!-- END OF Header -->
+		
+		<!-- Content -->
+<div data-role="content">				
+		<form action="#" method="get" data-ajax="false" class="ui-body ui-body-b ui-corner-all">
+				<fieldset>
+					<div data-role="fieldcontain">
+						<label>Nombre:</label>
+						<input type="text" name="name"></input>
+					</div>
+					<div data-role="fieldcontain">
+						<label>Descripción:</label>
+						<textarea name="description"></textarea >
+					</div>	
+					<div data-role="fieldcontain">
+						<label for="group" class="select">Grupo</label>
+						<select name="group" id="shipping">
+							<option value="1">Pierna</option>
+							<option value="2">Brazo</option>							
+						</select>
+					</div>									
+					<button type="submit" data-theme="b" name="submit" value="submit-value">Guardar</button>
+				</fieldset>
+			</form>
+ </div>
+		<!-- END OF Content -->	
+		
+		<!-- Footer -->
+		<div data-role="footer" data-theme="e">		
+			<!-- Ads content -->	
+			<h1> Anuncio </h1>
+		</div>
+		<!-- END OF Footer -->				
+		<script src="jquery/jquery-1.10.2.min.js"></script>
+		<script src="jquery/jquery.mobile-1.3.2.min.js"></script>				
+		<script src="js/app.min.js"></script>		
+	</div>			
+</body>
+</html>

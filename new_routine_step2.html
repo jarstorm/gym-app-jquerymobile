@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>GYM APP</title>    
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" />       		
+</head>
+<body>
+
+	<div id="show_routine_details_page" data-role="page">
+		<!-- Header -->
+		<div data-role="header">						
+			<h1 id="index_week_title">New routine - Step 2</h1>				
+		</div>
+		<!-- END OF Header -->
+		
+		<!-- Content -->
+<div data-role="content" id="page_content">				
+		<a data-role="button" href="#add_exercise_dialog" data-rel="dialog" data-icon="plus"> Añadir ejercicio </a>
+		<br>		
+		<ul data-role="listview" id="exercises_list">  			
+		</ul>
+		<br>
+		<a data-role="button" onclick="storeRoutineInDB();" data-theme="b" rel="external" href="routine.html">Finalizar</a>		
+ </div> 
+		<!-- END OF Content -->				
+		
+		<!-- Footer -->
+		<div data-role="footer" data-theme="e">		
+			<!-- Ads content -->	
+			<h1> Anuncio </h1>
+		</div>
+		<!-- END OF Footer -->				
+		<script src="jquery/jquery-1.10.2.min.js"></script>
+		<script src="jquery/jquery.mobile-1.3.2.min.js"></script>				
+		<script src="js/app.min.js"></script>		
+	</div>			
+	
+	<!-- Dialog -->
+			<div data-role="dialog" id="add_exercise_dialog">
+  <div data-role="header">
+    <h1>Añadir ejercicio</h1>
+  </div>
+  <div data-role="content" id="dialog_content">
+    
+				<fieldset>					
+					<div data-role="fieldcontain">
+						<label for="exercise" class="select">Ejercicio</label>
+						<select name="exercise" id="exercise">
+							<option value="1">Banca</option>
+							<option value="2">Mancuernas</option>							
+							<option value="3">Polea</option>	
+						</select>						
+					</div>		
+				</fieldset>	
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><label for="number_exercises" class="input">Número de series</label></div>
+						<div class="ui-block-b"><span style="float:right"><label for="number_exercises" class="input">Unidades</label></span></div>					
+					</div>	
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><input id="add_exercise_series_number" type="number" name="number_exercises" min="0" max="10" step="1" value="0"></input></div>					
+					
+				
+				<div class="ui-block-b"><span style="float:right"><fieldset data-role="controlgroup" data-type="horizontal" id="radio-choice">								
+									<input type="radio" name="radio-choice" id="radio-choice-a" value="per" checked="checked" />
+									<label for="radio-choice-a">%</label>
+									<input type="radio" name="radio-choice" id="radio-choice-b" value="wei" />
+									<label for="radio-choice-b">Kg</label>								
+							</fieldset></span></div>
+					</div>		
+				<div id="new_exercises" >
+					<ul id="series_list" data-role="listview" data-inset="true" data-theme="e" class="ui-body ui-body-b ui-corner-all">					
+															
+							
+					</ul>
+				</div>
+	<a data-role="button" onclick="storeNewRoutineExercise();" data-theme="e">Aceptar</a>		
+  </div>
+</div>
+		<!-- END OF Dialog -->
+		
+</body>
+</html>
